@@ -10,7 +10,7 @@
 #import "PlayingCard.h"
 #import "PlayingCardDeck.h"
 
-@interface CardMathingGame : NSObject
+@interface CardMatchingGame : NSObject
 
 // designated initializer
 - (id)initWithCardCount:(NSUInteger)count usingDeck:(PlayingCardDeck *)deck withExtendedModeOn:(BOOL)extendedModeOn;

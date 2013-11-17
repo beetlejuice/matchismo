@@ -9,7 +9,7 @@
 #import "CardGameViewController.h"
 #import "PlayingCardDeck.h"
 #import "PlayingCard.h"
-#import "CardMathingGame.h"
+#import "CardMatchingGame.h"
 #import "ProjectEnums.h"
 #import "GameResult.h"
 
@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
 //@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
-@property (strong, nonatomic) CardMathingGame *game;
+@property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *flipResultLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *extendedModeSwitch;
@@ -32,9 +32,9 @@
     return _gameResult;
 }
 
-- (CardMathingGame *)game
+- (CardMatchingGame *)game
 {
-    if (!_game) _game = [[CardMathingGame alloc] initWithCardCount:[self.cardButtons count] usingDeck:[[PlayingCardDeck alloc] init] withExtendedModeOn:self.extendedModeSwitch.isOn];
+    if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count] usingDeck:[[PlayingCardDeck alloc] init] withExtendedModeOn:self.extendedModeSwitch.isOn];
     
     return _game;
 }
